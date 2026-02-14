@@ -20,4 +20,21 @@ public class ArrayUtility {
         }
         System.out.println();
     }
+
+    public static int[][] input2DArray(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter number of rows : ");
+        int rows = input.nextInt();
+        System.out.print("Enter number of columns : ");
+        int columns = input.nextInt();
+        int[][] nums = new int[rows][columns];
+
+        for(int i=0 ; i<rows ; i++){
+            for(int j=0 ; j<columns ; j++){
+            System.out.print("Enter row :"+(i+1)+ " , column : "+(j+1)+ " : ");
+            nums[i][j] = input.nextInt();
+        }
+    }
+        return nums;
+    }
 }
